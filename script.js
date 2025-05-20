@@ -41,15 +41,15 @@ document.addEventListener('DOMContentLoaded', function() {
         dateButtonsContainer.innerHTML = '';
 
         for (let i = config.archiveDepth; i > 0; i--) {
-            const date = new Date(currentDate);
+            const date = new Date();
             date.setDate(date.getDate() - i);
             createDateButton(date, true);
         }
 
-        createDateButton(new Date(currentDate), false);
+        createDateButton(new Date(), false);
 
         for (let i = 1; i <= config.maxBookingPeriod; i++) {
-            const date = new Date(currentDate);
+            const date = new Date();
             date.setDate(date.getDate() + i);
             createDateButton(date, false);
         }
